@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculadora preço de custo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    </style>
+  </head>
+  <body>
+    <div id="container">
+
+        <div id="box"> 
+
+          <div class="d-grid gap-2 col-6 mx-auto">
+
+            <button id="selectXmlButton" class="btn btn-primary" type="button">Importar XML</button>
+
+          </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              
+              <label for="Frete" class="form-label">Frete: </label>
+              <input type="text" id="Frete" class="form-control form-control-sm" value="0,00" disabled>
+
+              <label for="Desp" class="form-label">Despesas Acessórias: </label>
+              <input type="text" id="Desp" class="form-control form-control-sm" value="0,00" disabled>
+
+              <label for="Seguro" class="form-label">Seguro: </label>
+              <input type="text" id="Seguro" class="form-control form-control-sm" value="0,00" disabled>
+
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+
+              <label class="form-label">Regime Tributário: </label>
+
+              <select id="regimeType" class="form-select" aria-label="">
+                <option value="0">Simples Nacional</option>
+                <option value="1">Simples Nacional - Sublimite da receita bruta</option>
+                <option value="2">Regime Normal - Lucro presumido</option>
+                <option value="3">Lucro Normal - Lucro real</option>
+              </select>
+
+              <div class="d-flex justify-content-center align-items-center">
+                <button type="button" id ='reCalculate' class="btn btn-secondary">Recalcular</button>
+              </div>
+            </div>
+            <h4>Clique nos produtos abaixo para expandir e visualizar o calculo</h1>
+
+            <table id="productTable">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Código</th>
+                  <th>Preço de custo</th>
+                  <th>Quantidade</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+                
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="js/xmlParser.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/updateTableWithProducts.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/XML.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+  </body>
+</html>
