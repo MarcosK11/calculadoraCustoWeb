@@ -78,7 +78,7 @@ th {
     color: #1F394D;
     font-size: 16px;
     font-weight: 600;
-
+    cursor: pointer;
   }
 
 .fixed-label-width {
@@ -91,4 +91,5 @@ th {
    font-size: 16px;
    font-weight: 600;
 }
+
 
