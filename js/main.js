@@ -6,18 +6,11 @@ document.addEventListener('DOMContentLoaded', async function () {
   selectXmlButton.addEventListener('click', async function () {
     try {
       selectedFile = await selectXmlFile();
-      console.log('arquivo selecionado 2:', selectedFile);
 
-      console.log('Dados da NFe Inicio:', parsedData);
-      console.log('Dados da NFe Inicio:', dataFront);
 
       parsedData = await parseXmlFile(selectedFile);
 
       dataFront = _.cloneDeep(parsedData);
-
-
-      console.log('Dados da NFe Inicio:', parsedData);
-      console.log('Dados da NFe Inicio:', dataFront);
 
         //Remover atributo disabled
         const inputsToDisable = document.querySelectorAll('.form-control');
@@ -50,28 +43,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (dataFront) {
         
         dataFront = _.cloneDeep(parsedData);
-
-        /*const segInput = document.getElementById('Seguro');
-        segInput.addEventListener('input', function(event) {
-          dataFront.total.segValue = parseFloat(event.target.value.replace(',', '.'));
-            console.log('frete:', parsedData.total.freightValue);
-          });
-        
-        const othersInput = document.getElementById('Desp');
-          othersInput.addEventListener('input', function(event) {
-            dataFront.total.othersValue = parseFloat(event.target.value.replace(',', '.'));
-          });
-        
-          const freightInput = document.getElementById('Frete');
-          freightInput.addEventListener('input', function(event) {
-            dataFront.total.freightValue= parseFloat(event.target.value.replace(',', '.'));
-          });*/
           
           //Função para atualizar valores(frete,despesas,seguro)
           updateValues(parsedData);
-
-          console.log('Dados da NFe R:', parsedData);
-          console.log('Dados da NFe R:', dataFront);
           updateValues(dataFront);
 
           calculate(dataFront);
@@ -79,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           addToggleListeners();
 
     } else {
-      console.log('Nenhum arquivo XML foi carregado ainda.');
+      alert('Nenhum arquivo XML foi carregado ainda.');
     }
 });
 

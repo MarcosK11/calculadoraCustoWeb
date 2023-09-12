@@ -7,10 +7,8 @@ function selectXmlFile() {
     input.addEventListener('change', function (event) {
       const selectedFile = event.target.files[0];
       if (selectedFile) {
-        console.log('Arquivo selecionado:', selectedFile.name);
         resolve(selectedFile);
       } else {
-        console.log('Nenhum arquivo selecionado.');
         reject('Nenhum arquivo selecionado');
       }
     });

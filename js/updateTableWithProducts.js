@@ -91,7 +91,6 @@ updateTableWithProducts = function(DatalistFront, parsedData){
     if (quantityInput) {
       quantityInput.addEventListener('input', function(event) {
         productData.quantity = parseFloat(event.target.value.replace(',', '.'));
-        console.log('Quantidade:', productData.quantity);
   
         calculate(parsedData, productData);
       });
@@ -100,7 +99,6 @@ updateTableWithProducts = function(DatalistFront, parsedData){
     if (DiscountInput) {
       DiscountInput.addEventListener('input', function(event) {
         productData.discount = parseFloat(event.target.value.replace(',', '.'));
-        console.log('desconto:', productData.discount);
   
         calculate(parsedData, productData);
       });
@@ -141,7 +139,6 @@ updateValues = function(dataFront)
       const freightInput = document.getElementById('Frete');
       freightInput.addEventListener('input', function(event) {
         dataFront.total.freightValue= parseFloat(event.target.value.replace(',', '.'));
-        console.log('frete:', dataFront.total.freightValue);
       });
 }
 

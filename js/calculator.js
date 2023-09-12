@@ -8,14 +8,12 @@ calculateFreight = function(total, product)
 calculateSeg = function(total, product) 
 {
         const seg = total.segValue * (product.value / total.totalValue);
-        console.log('seguro calculado:', seg);
         return Math.round(seg * 100) / 100; // Arredonda para 2 casas decimais
 }
 
 calculateOthers = function(total, product) 
 {
         const others = total.othersValue * (product.value / total.totalValue);
-        console.log('despesas calculado:', others);
         return Math.round(others * 100) / 100; // Arredonda para 2 casas decimais
 }
 
@@ -86,7 +84,6 @@ calculateCost = function(product){
     }
 
     default:
-      console.log('quebrou! regime', selectedValue);
       break;
   };
 }
@@ -105,7 +102,6 @@ calculate = function(Datalist)
         //calcula preço de custo
         productData.result = calculateCost (productData);
       })
-    //console.log('valor total seg', productData.result);
 }
 
 
