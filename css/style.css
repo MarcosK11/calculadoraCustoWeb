@@ -85,6 +85,10 @@ th {
     width: 200px; 
   }
 
+.form-label{
+  text-align: left;
+}
+
 [class*="form"]
 {
    color: #1F394D;

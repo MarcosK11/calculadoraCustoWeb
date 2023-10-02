@@ -68,7 +68,7 @@ updateTableWithProducts = function(DatalistFront, parsedData){
         <input type="text" class="form-control form-control-sm desconto" data-code="${productData.name}"  value="${productData.discount}">
       </div>
       <div id = "quantidadeD" class="row align-items-center justify-content-center">
-        <label class="form-label fixed-label-width">% quantidade </label>
+        <label class="form-label fixed-label-width">% (Dividido por) quantidade </label>
         <input type="text" class="form-control form-control-sm quantidade" data-code="${productData.name}" value="${productData.quantity}">
       </div>
       <div class="row align-items-center justify-content-center">

@@ -36,7 +36,7 @@ function parseProducts(xmlDoc) {
       othersValue: 0,
       freightValue: 0,
       fcpST: parseFloat(productNode.querySelector('vFCPST')?.textContent || 0),
-      difal: parseFloat(productNode.querySelector('vDifal')?.textContent || 0),
+      difal: parseFloat(productNode.querySelector('vICMSUFDest')?.textContent || 0),
       icmsDes: parseFloat(productNode.querySelector('vICMSDeson')?.textContent || 0),
       icms: parseFloat(productNode.querySelector('vICMS')?.textContent || 0),
       pis: parseFloat(productNode.querySelector('vPIS')?.textContent || 0),
