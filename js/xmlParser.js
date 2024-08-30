@@ -27,7 +27,7 @@ function parseProducts(xmlDoc) {
     const product = {
       name: productNode.querySelector('xProd')?.textContent || 'Sem nome',
       code: productNode.querySelector('cProd')?.textContent || '0',
-      price: parseFloat(productNode.querySelector('vUnCom')?.textContent || 0),
+      price: parseFloat(productNode.querySelector('vUnTrib')?.textContent || 0),
       quantity: parseFloat(productNode.querySelector('qTrib')?.textContent || 0),
       value: parseFloat(productNode.querySelector('vProd')?.textContent || 0),
       ipi: parseFloat(productNode.querySelector('vIPI')?.textContent || 0),
